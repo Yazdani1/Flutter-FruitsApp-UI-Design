@@ -119,11 +119,61 @@ class _HomeState extends State<Home>with SingleTickerProviderStateMixin {
 
       bottomNavigationBar: new Material(
         child: new Container(
+          margin: EdgeInsets.all(10.0),
           decoration: BoxDecoration(
             color: Colors.white
           ),
           height: 40.0,
           width: MediaQuery.of(context).size.width,
+          child: new Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+
+              new Container(
+                padding:EdgeInsets.only(bottom:5.0),
+                margin: EdgeInsets.only(left: 10.0),
+                child: new Text(
+                  "Filter",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                    width: 5.0,
+                  ))
+                ),
+              ),//container end
+
+              Icon(
+                Icons.search,
+                color: Colors.black,
+                size: 25.0,
+              ),
+              Icon(
+                Icons.favorite_border,
+                color: Colors.black,
+                size: 25.0,
+              ),
+              new Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25.0),
+                  color: Colors.red,
+                ),
+                height: 45.0,
+                width: 65.0,
+                child: new Row(
+                  children: <Widget>[
+
+                  ],
+                ),
+              )
+
+            ],
+          ),
         ),
       ),
 
