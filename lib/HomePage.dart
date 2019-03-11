@@ -166,7 +166,25 @@ class _HomeState extends State<Home>with SingleTickerProviderStateMixin {
                 height: 45.0,
                 width: 65.0,
                 child: new Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
+                    new Container(
+                      padding:EdgeInsets.only(left: 2.0),
+                      child: new Text(
+                        "12",
+                        style: TextStyle(
+                          fontSize: 15.0,
+                          color: Colors.white
+                        ),
+                      ),
+                    ),
+                    new Container(
+                      child: new Icon(
+                          Icons.shopping_cart,
+                          color: Colors.white,
+                        size: 20.0,
+                      ),
+                    )
 
                   ],
                 ),
