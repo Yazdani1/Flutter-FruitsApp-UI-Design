@@ -1,4 +1,4 @@
-# flutter_fruits_app_uidesign
+# Flutter-FruitsApp-UI-Design
 
 A new Flutter application.
 
