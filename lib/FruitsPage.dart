@@ -18,6 +18,20 @@ class _FruitPageState extends State<FruitPage> {
             new Column(
               children: <Widget>[
                 getCard("assets/a.jpg", "Apple", "53.", true),
+                getCard("assets/b.jpg", "Apple", "53.", true),
+                getCard("assets/c.jpg", "Apple", "53.", true),
+                getCard("assets/d.jpg", "Apple", "53.", true),
+                getCard("assets/e.jpg", "Apple", "53.", true),
+              ],
+            ),
+            new Column(
+              children: <Widget>[
+                SizedBox(height:45.0),
+                getCard("assets/f.jpg", "Lichi", "63.0", false),
+                getCard("assets/g.jpg", "Lichi", "63.0", false),
+                getCard("assets/h.jpg", "Lichi", "63.0", false),
+                getCard("assets/i.jpg", "Lichi", "63.0", false),
+                getCard("assets/j.jpg", "Lichi", "63.0", false)
               ],
             )
 
@@ -60,10 +74,14 @@ class _FruitPageState extends State<FruitPage> {
                     )
                   ),
                 ),//end container
-                Align(
-                  alignment: Alignment.topRight,
-                  child: iffab ? Icon(Icons.favorite,color: Colors.red):Icon(Icons.favorite_border,color: Colors.red,),
-                )
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Align(
+                    alignment: Alignment.topRight,
+                    child: iffab ? Icon(Icons.favorite,color: Colors.yellow):Icon(Icons.favorite_border,color: Colors.red,),
+
+                  ),
+                ),//end padding
               ],
             ),//Stack end..
             SizedBox(height: 20.0,),
@@ -71,14 +89,15 @@ class _FruitPageState extends State<FruitPage> {
               name,
               style: TextStyle(
                 fontSize: 14.0,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
+                color: Colors.orange
               ),
             ),
             new Text(
               '\$'+price+'each',
                 style: TextStyle(
                 fontSize: 14.0,
-                fontWeight: FontWeight.bold
+                color: Colors.black
             ),
             )
           ],
